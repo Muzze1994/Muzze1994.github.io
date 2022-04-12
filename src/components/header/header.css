@@ -1,17 +1,17 @@
-header{
+header {
     height: 100vh;
     padding-top: 7rem;
     overflow: hidden;
 }
 
-.header__container{
+.header__container {
     text-align: center;
     height: 100%;
     position: relative;
 }
 
 /* ======== CTA ======== */
-.cta{
+.cta {
     margin-top: 2.5rem;
     display: flex;
     gap: 1.2rem;
@@ -19,7 +19,7 @@ header{
 }
 
 /* ======== HEADER SOCIALS ======== */
-.header__socials{
+.header__socials {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +29,7 @@ header{
     bottom: 3rem;
 }
 
-.header__socials::after{
+.header__socials::after {
     content: '';
     width: 1px;
     height: 2rem;
@@ -37,7 +37,7 @@ header{
 }
 
 /* ========  ME IMAGE ======== */
-.me{
+/* .me{
     background: linear-gradient(var(--color-primary), transparent);
     width: 22rem;
     height: 30rem;
@@ -47,10 +47,40 @@ header{
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     padding: 5rem 1.5rem 1.5rem 1.5rem;
+} */
+
+.about__me {
+    width: 22rem;
+    height: 22rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+    display: grid;
+    place-items: center;
+}
+
+.about__me-image {
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+
+.about__me-image:hover {
+    transform: rotate(0);
 }
 
 /* ========  SCROLL DOWN ======== */
-.scroll__down{
+.scroll__down {
     position: absolute;
     right: -2.3rem;
     bottom: 5rem;
@@ -60,19 +90,28 @@ header{
 }
 
 /* ========= MEDIA QUERIES (MEDIUM DEVICES) ========= */
-@media screen and (max-width: 1024px){
-    header{
+@media screen and (max-width: 1024px) {
+    header {
         height: 68vh;
-    }   
+    }
+
+   
 }
 
 /* ========= MEDIA QUERIES (SMALL DEVICES) ========= */
-@media screen and (max-width: 600px){
-    header{
-        height: 100vh;
+@media screen and (max-width: 600px) {
+    .about__me{
+        width: 15rem;
+        height: 15rem;
+        margin: 5rem auto 5rem 3rem;
+    }
+    header {
+        height: 90vh;
+        padding-top: 0;
     }
 
-    .header__socials, .scroll__down{
+    .header__socials,
+    .scroll__down {
         display: none;
     }
 }
