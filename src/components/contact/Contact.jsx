@@ -33,21 +33,21 @@ const Contact = () => {
             <HiOutlineMail className='contact__option-icon'/>
             <h4>Email</h4>
             <h5>rasmusnyberglind@hotmail.com</h5>
-            <a href="mailto:rasmusnyberglind@hotmail.com" target="_blank">Send a message</a>
+            <a href="mailto:rasmusnyberglind@hotmail.com" target="_blank" rel="noreferrer">Skicka ett meddelande</a>
           </article>
           <article className='contact__option'>
             <RiMessengerLine className='contact__option-icon'/>
             <h4>Messenger</h4>
             <h5>Rasmus</h5>
-            <a href="https://m.me/rasmus.lind.18/" target="_blank"> Send a message</a>
+            <a href="https://m.me/rasmus.lind.18/" target="_blank" rel="noreferrer">Skicka ett meddelande</a>
           </article>
         </div>
         {/* END OF CONTACT OPTIONS */}
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name='name' placeholder='Your Full Name' required />
-          <input type="email" name='email' placeholder='Your Email' required />
-          <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
-          <button type='submit' className='btn btn-primary'>Send Message</button>
+          <input type="text" name='name' placeholder='Namn' required />
+          <input type="email" name='email' placeholder='Email' required />
+          <textarea name="message" rows="7" placeholder='Meddelande..' required></textarea>
+          <button type='submit' className='btn btn-primary'>Skicka meddelande</button>
         </form>
       </div>
     </section>
